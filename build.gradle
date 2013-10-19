@@ -9,6 +9,7 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 
 buildscript {
+  apply from: 'https://github.com/valkolovos/gradle_cobertura/raw/master/repo/gradle_cobertura/gradle_cobertura/1.2.1/coberturainit.gradle'
   repositories {
     mavenCentral()
     maven {
@@ -22,6 +23,7 @@ buildscript {
     classpath 'org.springframework.build.gradle:propdeps-plugin:0.0.1'
   }
 }
+
 
 repositories {
   mavenCentral()
@@ -60,11 +62,17 @@ dependencies {
 
 }
 
+cobertura {
+  coverageFormat="xml"
+}
+
 task wrapper(type: Wrapper) {
     gradleVersion = '1.6'
 }
 
 test {
+  jvmArgs "-XX:-UseSplitVerifier" //cobertura has issues with java 7
+  exclude "**/*Functional*"
     testLogging {
         // Show that tests are run in the command-line output
         events 'started', 'passed'
