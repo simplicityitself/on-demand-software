@@ -73,8 +73,9 @@ task wrapper(type: Wrapper) {
     gradleVersion = '1.6'
 }
 
-buildInfo.build.name="on-demand-software"
-buildInfo.build.number="1050"
+name="on-demand-software"
+group="com.simplicityitself"
+version="1234"
 
 test {
   jvmArgs "-XX:-UseSplitVerifier" //cobertura has issues with java 7
