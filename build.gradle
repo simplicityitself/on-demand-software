@@ -8,6 +8,10 @@ apply plugin: 'propdeps-eclipse'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'findbugs'
+apply plugin: 'maven'
+
+group="com.simplicityitself"
+version="1234"
 
 buildscript {
   apply from: 'https://github.com/valkolovos/gradle_cobertura/raw/master/repo/gradle_cobertura/gradle_cobertura/1.2.1/coberturainit.gradle'
