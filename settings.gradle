@@ -1,4 +1,4 @@
 
 rootProject.name="on-demand-software"
-rootProject.group="com.simplicityitself"
-rootProject.version="1234"
+group="com.simplicityitself"
+version="1234"
