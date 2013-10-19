@@ -7,6 +7,7 @@ apply plugin: 'propdeps-idea'
 apply plugin: 'propdeps-eclipse'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
+apply plugin: 'findbugs'
 
 buildscript {
   apply from: 'https://github.com/valkolovos/gradle_cobertura/raw/master/repo/gradle_cobertura/gradle_cobertura/1.2.1/coberturainit.gradle'
