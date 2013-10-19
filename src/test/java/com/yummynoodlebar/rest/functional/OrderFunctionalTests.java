@@ -2,7 +2,6 @@ package com.yummynoodlebar.rest.functional;
 
 import com.yummynoodlebar.rest.controller.fixture.RestDataFixture;
 import com.yummynoodlebar.rest.domain.Order;
-import com.yummynoodlebar.rest.domain.OrderStatus;
 import org.junit.Test;
 import org.springframework.http.*;
 import org.springframework.security.crypto.codec.Base64;
@@ -12,7 +11,6 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Arrays;
 
 import static junit.framework.TestCase.*;
-import static junit.framework.TestCase.assertTrue;
 
 public class OrderFunctionalTests {
 
@@ -43,7 +41,7 @@ public class OrderFunctionalTests {
     RestTemplate template = new RestTemplate();
     try {
       ResponseEntity<Order> entity = template.postForEntity(
-          "http://localhost:8080/aggregators/orders",
+          "http://localhost:7777/aggregators/orders",
           requestEntity, Order.class);
 
       fail("Request Passed incorrectly with status " + entity.getStatusCode());
@@ -71,7 +69,7 @@ public class OrderFunctionalTests {
 
     RestTemplate template = new RestTemplate();
     return template.postForEntity(
-        "http://localhost:8080/aggregators/orders",
+        "http://localhost:7777/aggregators/orders",
         requestEntity, Order.class);
   }
 
