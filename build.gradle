@@ -65,10 +65,19 @@ task wrapper(type: Wrapper) {
 }
 
 test {
-    exclude "tests/**/integration/**"
+    testLogging {
+        // Show that tests are run in the command-line output
+        events 'started', 'passed'
+    }
 }
-task intTest(type: Test) {
-    include "tests/**/integration/**"
+task unitTests(type: Test) {
+  include "**/*Unit*"
+}
+task integrationTests(type: Test) {
+  include "**/*Integration*"
+}
+task functionalTests(type: Test) {
+  include "**/*Functional*"
 }
 
 tomcatRunWar.contextPath = ''

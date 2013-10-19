@@ -11,7 +11,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
-public class OrderTests {
+public class OrderUnitTests {
 
   // {!begin supportHateoas}
   @Before
