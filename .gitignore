@@ -1,10 +1,6 @@
 *.class
 
 # Package Files #
-*.jar
-*.war
-*.ear
-*.zip
 *.iml
 *.ipr
 *.iws
