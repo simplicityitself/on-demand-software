@@ -72,3 +72,4 @@ task intTest(type: Test) {
 }
 
 tomcatRunWar.contextPath = ''
+tomcatRunWar.httpPort=7777
