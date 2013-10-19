@@ -62,7 +62,9 @@ dependencies {
     testCompile "org.mockito:mockito-all:1.9.5"
 
 }
-
+findbugs {
+    ignoreFailures = true
+}
 cobertura {
   coverageFormat="xml"
 }
