@@ -97,8 +97,28 @@ task unitTests(type: Test) {
 task integrationTests(type: Test) {
   include "**/*Integration*"
 }
-task functionalTests(type: Test) {
-  include "**/*Functional*"
+ext {
+    tomcatStopPort = 7776
+    tomcatStopKey = 'stopKey'
+}
+
+task functionalTomcatRun(type: org.gradle.api.plugins.tomcat.TomcatRunWar) {
+    stopPort = tomcatStopPort
+    stopKey = tomcatStopKey
+    httpPort=7777 
+    contextPath = ""
+    daemon = true
+}
+
+task functionalTomcatStop(type: org.gradle.api.plugins.tomcat.TomcatStop) {
+    stopPort = tomcatStopPort
+    stopKey = tomcatStopKey
+}
+
+task functionalTest(type: Test) {
+    include '**/*Functional*'
+    dependsOn functionalTomcatRun
+    doLast { functionalTomcatStop }
 }
 
 tomcatRunWar.contextPath = ''
