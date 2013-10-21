@@ -98,7 +98,7 @@ public class OrderEventHandlerUnitTest {
 
     verify(mockOrdersMemoryRepository).delete(ev.getKey());
 
-    assertFalse(orderDeletedEvent.isEntityFound());
+    assertTrue(orderDeletedEvent.isEntityFound());
     assertTrue(orderDeletedEvent.isDeletionCompleted());
     assertEquals(order.getDateTimeOfSubmission(), orderDeletedEvent.getDetails().getDateTimeOfSubmission());
   }
