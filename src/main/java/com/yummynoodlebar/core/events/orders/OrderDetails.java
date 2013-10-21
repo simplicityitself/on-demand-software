@@ -20,7 +20,7 @@ public class OrderDetails {
   }
 
   public Date getDateTimeOfSubmission() {
-    return this.dateTimeOfSubmission;
+    return this.dateTimeOfSubmission.clone();
   }
 
   public void setDateTimeOfSubmission(Date dateTimeOfSubmission) {
