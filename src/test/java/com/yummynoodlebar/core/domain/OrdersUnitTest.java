@@ -24,9 +24,13 @@ public class OrdersUnitTest {
   }
 
   @Test
+  public void someTest()[
+    assertEquals(true, true);
+    ]
+
+  @Test
   public void addASingleOrderToTheOrders() {
 
-     assertEquals(true, false);
     assertEquals(0, uut.findAll().size());
 
     uut.save(OrdersFixtures.standardOrder());
