@@ -20,7 +20,7 @@ public class OrderDetails {
   }
 
   public Date getDateTimeOfSubmission() {
-    return this.dateTimeOfSubmission.value();
+    return new Date(this.dateTimeOfSubmission);
   }
 
   public void setDateTimeOfSubmission(Date dateTimeOfSubmission) {
