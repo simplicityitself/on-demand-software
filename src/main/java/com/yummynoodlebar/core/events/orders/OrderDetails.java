@@ -20,7 +20,7 @@ public class OrderDetails {
   }
 
   public Date getDateTimeOfSubmission() {
-    return new Date(this.dateTimeOfSubmission);
+    return new Date(this.dateTimeOfSubmission.toString());
   }
 
   public void setDateTimeOfSubmission(Date dateTimeOfSubmission) {
