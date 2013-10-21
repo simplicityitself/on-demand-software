@@ -1,6 +1,5 @@
 package com.yummynoodlebar.core.events.orders;
 
-
 import java.util.Collections;
 import java.util.Date;
 import java.util.Map;
