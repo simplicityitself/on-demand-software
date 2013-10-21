@@ -24,9 +24,9 @@ public class OrdersUnitTest {
   }
 
   @Test
-  public void someTest()[
+  public void someTest(){
     assertEquals(true, true);
-    ]
+}
 
   @Test
   public void addASingleOrderToTheOrders() {
