@@ -5,6 +5,7 @@ This is the source project for use in the Simplicity Itself course "On Demand So
 
 Change Readme
 and Again
+build again
 
 ## Agenda
 ### Day 1 - Introduction and Continuous Integration
