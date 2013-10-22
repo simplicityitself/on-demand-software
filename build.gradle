@@ -11,12 +11,12 @@ apply plugin: 'findbugs'
 apply plugin: 'maven'
 
 group="com.simplicityitself"
-
-//Can be used in a Jenkins environment to dynamically set the version number from the build.
-//if (System.getenv("BUILD_NUMBER")) {
-//  version=System.getenv("BUILD_NUMBER")
-//}
 version="DEVELOPER"
+//Can be used in a Jenkins environment to dynamically set the version number from the build.
+if (System.getenv("BUILD_NUMBER")) {
+  version=System.getenv("BUILD_NUMBER")
+}
+
 
 buildscript {
   apply from: 'https://github.com/valkolovos/gradle_cobertura/raw/master/repo/gradle_cobertura/gradle_cobertura/1.2.1/coberturainit.gradle'
