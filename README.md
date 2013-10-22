@@ -7,6 +7,7 @@ Change Readme
 and Again
 build again
 another
+my feature change
 
 ## Agenda
 ### Day 1 - Introduction and Continuous Integration
